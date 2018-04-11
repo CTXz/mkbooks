@@ -40,6 +40,7 @@ Additionally, you may install the script to `/usr/local/bin`!
 
 ```
 # cp mkbooks.sh /usr/local/bin/
+# chmod +x /usr/local/bin/mkbooks.sh
 ```
 
 ## Usage:
