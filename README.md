@@ -16,7 +16,7 @@ The following software dependencies are required for the script to work:
 - [mdpdf](https://github.com/BlueHatbRit/mdpdf)
 - [pandoc](https://pandoc.org/)
 
-On Ubuntu 17.10 systems, those can be obtained the following way:
+On Ubuntu 17.10+ systems, those can be obtained the following way:
 ```
 $ sudo apt install npm pandoc
 $ sudo npm install -g mdpdf --unsafe-perm=true
