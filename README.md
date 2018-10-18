@@ -16,7 +16,7 @@ The following software dependencies are required for the script to work:
 - [mdpdf](https://github.com/BlueHatbRit/mdpdf)
 - [pandoc](https://pandoc.org/)
 
-On Ubuntu 17.10 systems, those can be obtained the following way:
+On Ubuntu 17.10+ systems, those can be obtained the following way:
 ```
 $ sudo apt install npm pandoc
 $ sudo npm install -g mdpdf --unsafe-perm=true
@@ -27,13 +27,13 @@ $ sudo npm install -g mdpdf --unsafe-perm=true
 Clone the repository:
 
 ```bash
-git clone https://github.com/CTXz/mkbooks.git
+$ git clone https://github.com/CTXz/mkbooks.git
 ```
 
 From here, the script may be executed directly:
 ```
-cd mkbooks
-bash mkbooks.sh -h
+$ cd mkbooks
+$ bash mkbooks.sh -h
 ```
 
 Additionally, you may install the script to `/usr/local/bin`!
@@ -48,7 +48,7 @@ Additionally, you may install the script to `/usr/local/bin`!
 To run the script:
 
 ```
-bash mkbooks.sh [-h] <cfg> <out> [extra]
+$ bash mkbooks.sh [-h] <cfg> <out> [extra]
 ```
 
 ### Options/Arguments
@@ -63,9 +63,9 @@ bash mkbooks.sh [-h] <cfg> <out> [extra]
 ### Examples
 
 ```
-bash mkbooks.sh ./mkdocs.yml docs.pdf
-bash mkbooks.sh ./mkdocs.yml docs.epub
-bash mkbooks.sh ./mkdocs.yml docs.pdf '--style=styles.css'
+$ bash mkbooks.sh ./mkdocs.yml docs.pdf
+$ bash mkbooks.sh ./mkdocs.yml docs.epub
+$ bash mkbooks.sh ./mkdocs.yml docs.pdf '--style=styles.css'
 ```
 
 If no error has occurred, a PDF or EPUB will be generated!
