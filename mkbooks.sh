@@ -161,14 +161,14 @@ if [[ "$READING_PAGES" > 0 && "$I" > 0 ]]; then
       OUT="$PWD/$2"
     fi
 
-    # Dive into docs/ directory and convert md to pdf using pandoc!
+    # Dive into docs/ directory and convert md to EPUB using pandoc!
     if [ -z "$3" ]; then
       cd $(dirname $1)/docs && pandoc "${DOCS[@]}" -o "$OUT";
     else
       cd $(dirname $1)/docs && pandoc "$3" "${DOCS[@]}" -o "$OUT";
     fi
 
-    if [ ! -f "$2" ]; then
+    if [ ! -f "$OUT" ]; then
       echo "Converting failed!"
       exit -1
     fi
