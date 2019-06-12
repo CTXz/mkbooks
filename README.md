@@ -7,6 +7,7 @@ A script that turns your [Mkdocs](http://Mkdocs.org) project into a PDF or EPUB!
 - [Dependencies](#dependencies)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Troubleshooting](#troubleshooting)
 - [License](#license)
 
 ## Dependencies
@@ -69,6 +70,24 @@ $ bash mkbooks.sh ./mkdocs.yml docs.pdf '--style=styles.css'
 ```
 
 If no error has occurred, a PDF or EPUB will be generated!
+
+## Troubleshooting:
+
+Should mkbooks complain that mdpdf has not been installed:
+
+```
+mkbooks: mdpdf has not been installed!
+```
+
+despite mdpdf being installed, mdpdf may be improperly executing. Try to run `mdpdf` and see if an error is being thrown.
+
+Should `mdpdf` return the following error:
+
+```
+/usr/bin/env: ‘node\r’: No such file or directory
+```
+
+Then the newline formatting of the mdpdf script is set to CRLF. To fix this issue, open the mdpdf script in `/usr/local/bin/mdpdf` with a text editor that can convert from CRLF to LF. Alternatively, you can use the [dos2unix](http://manpages.ubuntu.com/manpages/trusty/man1/dos2unix.1.html) tool.
 
 ## License
 This project is licensed under the MIT License
